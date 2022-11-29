@@ -9,12 +9,13 @@ import { TASKS } from '../mock-tasks';
 })
 
 export class TaskService {
+  private apiUrl = 'http://localhost:5000/tasks';
 
-  constructor() { }
+
+  constructor(private httpClient: HttpClient) { }
 
 
   getTasks(): Observable<Task[]> {
-    const tasks = of(TASKS);
-    return tasks;
+    return this.httpClient.get<Task[]>(this.apiUrl);
   }
 }
