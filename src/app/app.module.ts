@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ButtonComponent } from './components/button/button.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   // Components go here.
@@ -20,7 +21,8 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
   // Modules go here.
   imports: [
     BrowserModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   // Global services go here.
   providers: [],
