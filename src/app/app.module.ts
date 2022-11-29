@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -18,7 +19,8 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
   ],
   // Modules go here.
   imports: [
-    BrowserModule
+    BrowserModule,
+    FontAwesomeModule
   ],
   // Global services go here.
   providers: [],
