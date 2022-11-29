@@ -1,7 +1,2 @@
-<ul *ngFor="let task of tasks">
-    <li>
-        <p>{{task.id}}</p>
-        <p>{{task.text}}</p>
-        <p>{{task.day}}</p>
-    </li>
-</ul>
+<app-task-item *ngFor="let task of tasks" [task]="task">
+</app-task-item>
