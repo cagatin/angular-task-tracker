@@ -22,4 +22,12 @@ export class TaskService {
     const url = `${this.apiUrl}/${task.id}`
     return this.httpClient.delete<Task>(url);
   }
+
+  updateTask(task: Task): Observable<Task> {
+    const url = `${this.apiUrl}/${task.id}`;
+    return this.httpClient.put<Task>(
+      url,
+      task
+    );
+  }
 }
