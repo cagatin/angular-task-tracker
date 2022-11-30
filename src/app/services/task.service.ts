@@ -9,7 +9,9 @@ import { Task } from '../Task';
 
 export class TaskService {
   private apiUrl = 'http://localhost:5000/tasks';
-
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  }
 
   constructor(private httpClient: HttpClient) { }
 
@@ -27,7 +29,8 @@ export class TaskService {
     const url = `${this.apiUrl}/${task.id}`;
     return this.httpClient.put<Task>(
       url,
-      task
+      task,
+      this.httpOptions
     );
   }
 }
