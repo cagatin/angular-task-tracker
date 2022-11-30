@@ -16,4 +16,8 @@ export class TasksComponent implements OnInit {
     this.taskService.getTasks().subscribe((task) => this.tasks = task);
   }
 
+  deleteTask(task: Task): void {
+
+  }
+
 }
