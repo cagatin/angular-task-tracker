@@ -8,6 +8,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddTaskComponent } from './components/add-task/add-task.component';
 
 @NgModule({
   // Components go here.
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     ButtonComponent,
     TasksComponent,
-    TaskItemComponent
+    TaskItemComponent,
+    AddTaskComponent,
   ],
   // Modules go here.
   imports: [
