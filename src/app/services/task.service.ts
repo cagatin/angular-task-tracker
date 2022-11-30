@@ -33,4 +33,12 @@ export class TaskService {
       this.httpOptions
     );
   }
+
+  addTask(task: Task): Observable<Task> {
+    return this.httpClient.post<Task>(
+      this.apiUrl,
+      task,
+      this.httpOptions
+    )
+  }
 }
