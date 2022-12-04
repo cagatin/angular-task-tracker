@@ -1,5 +1,8 @@
 <header>
     <h1>{{title}}</h1>
+
+    <!-- ngIf directive to check if the current route is the home route -->
+    <!-- binds the toggleAddTask() method specified in the parent header component to the btnClick event emitter specified in the child button component-->
     <app-button *ngIf="hasRoute('/')" color="{{ showAddTask ? 'red' : 'green' }}"
         text="{{ showAddTask ? 'Close' : 'Add'}}" (btnClick)="toggleAddTask()"></app-button>
 </header>
