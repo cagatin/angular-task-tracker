@@ -20,9 +20,13 @@ const appRoutes: Routes = [
   { path: 'about', component: AboutComponent }
 ]
 
-
+/*
+NgModule --> takes meta data object which describes:
+ - how to compile a component template
+ - how to create an injector at runtime
+*/
 @NgModule({
-  // Components go here.
+  // Declares modules public to enable usage throughout entire app.
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -33,13 +37,13 @@ const appRoutes: Routes = [
     AboutComponent,
     FooterComponent,
   ],
-  // Modules go here.
+  // Imports Modules.
   imports: [
     BrowserModule,
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes, { enableTracing: true }),
+    RouterModule.forRoot(appRoutes, { enableTracing: true }),   // used for Routing
   ],
   // Global services go here.
   providers: [],

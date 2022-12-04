@@ -1,5 +1,6 @@
 import { Task } from './Task';
 
+// Mock Data used to display tasks
 export const TASKS: Task[] = [
     {
         id: 1,
