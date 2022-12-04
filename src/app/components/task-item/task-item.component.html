@@ -1,6 +1,8 @@
+<!-- Binds the onToggle() method of the task-item component to a double click event -->
 <div [ngClass]="{reminder: task.reminder}" class="task" (dblclick)="onToggle(task)">
     <h3>
         {{task.text}}
+        <!-- binds the onDelete() method to a click event on the icon -->
         <fa-icon [ngStyle]="{'color': 'red'}" [icon]="faTimes" (click)="onDelete(task)"></fa-icon>
     </h3>
     <p>{{task.day}}</p>
