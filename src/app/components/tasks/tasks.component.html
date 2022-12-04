@@ -1,4 +1,12 @@
+<!-- Add Task form (add-task component) -->
+<!-- child to parent binding; calls the addTask() method of the parent task mathod based on the created task from the child's onAddTask event emitter object (new task object) -->
 <app-add-task (onAddTask)="addTask($event)"></app-add-task>
+
+<!-- Renders the task-item component -->
+<!-- uses the ngFor directive to render a task item for each specific task within the backend db.json file -->
+<!-- binds the task to the child task property (parent to child binding using @Input) -->
+<!-- onDeleteTask event emitter object from child is then passed to the parent deleteTask() method -->
+<!-- onToggleReminder event emitter object from the child is then passed to the parent toggleReminder() method -->
 <app-task-item *ngFor="let task of tasks" [task]="task" (onDeleteTask)="deleteTask(task)"
     (onToggleReminder)="toggleReminder(task)">
 </app-task-item>
