@@ -1,6 +1,10 @@
+<!-- if the showAddTask property is true, then the following form is displayed -->
+
+<!-- binds the onSubmit() method to a ngSubmit directive -->
 <form *ngIf="showAddTask" class="add-form" (ngSubmit)="onSubmit()">
     <div class="form-control">
         <label for="text">Task</label>
+        <!-- (ngModel) -> 2 way binding -->
         <input type="text" name="text" id="text" placeholder="Add Task" [(ngModel)]="text">
     </div>
     <div class="form-control">

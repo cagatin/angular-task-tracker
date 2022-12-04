@@ -16,6 +16,7 @@ export class AddTaskComponent implements OnInit {
   showAddTask!: boolean;
   subscription!: Subscription;
 
+  // Injects the UIService object into the add-task component to change the showAddTask value
   constructor(private uiService: UiService) {
     this.subscription = this.uiService.onToggle().subscribe((value) => this.showAddTask = value);
   }
@@ -35,6 +36,7 @@ export class AddTaskComponent implements OnInit {
       reminder: this.reminder
     }
 
+    // Emits the new task to the parent
     this.onAddTask.emit(newTask);
 
     this.text = '';
